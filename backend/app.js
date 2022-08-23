@@ -8,6 +8,7 @@ const path = require("path");
 // importing routes
 const userRoutes = require("./routes/userRoute");
 const contactRoutes = require("./routes/contactRoute");
+const companyRoutes = require("./routes/companyRoutes");
 
 // Initializing app
 const PORT = process.env.PORT;
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, "public/images")));
 // Routes
 app.use("/api/v1", userRoutes);
 app.use("/api/v1/contact", contactRoutes);
+app.use("/api/v1/company", companyRoutes);
 
 // Server connection
 app.listen(PORT, () => {
